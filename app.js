@@ -71,8 +71,12 @@ const userRouter = require('./app/router/userRouter')
 app.use("/auth", userRouter)
 const adminRouter = require('./app/router/adminRouter')
 app.use("/admin", adminRouter)
-const TaskRouter=require("./app/router/taskRouter")
-app.use("/task",TaskRouter)
+const TaskRouter = require("./app/router/taskRouter")
+app.use("/task", TaskRouter)
+const CategoryRouter = require("./app/router/categoryRouter")
+app.use("/category", CategoryRouter)
+const labelRouter=require("./app/router/labelRouter")
+app.use("/label",labelRouter)
 const PORT = 8400
 app.listen(PORT, () => {
   console.log(`Server is running this url http://localhost:${PORT}`);
